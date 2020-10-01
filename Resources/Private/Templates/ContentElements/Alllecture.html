@@ -1,0 +1,10 @@
+{namespace f=TYPO3\CMS\Fluid\ViewHelpers}
+{namespace o=UniPotsdam\Lsfapi\ViewHelpers}
+<f:if condition="{data.header}">
+    <h2>{data.header}</h2>
+</f:if>  
+<f:debug>{data}</f:debug>
+<o:getlecturescheduleall /><f:debug>{_all}</f:debug>
+
+<f:format.html><o:getcoursedata id="{data.lsfcoursedata}" /></f:format.html>
+
